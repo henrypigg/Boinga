@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		909B7AC821F93B50005E88DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909B7AC721F93B50005E88DC /* AppDelegate.swift */; };
+		909B7ACA21F93B50005E88DC /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 909B7AC921F93B50005E88DC /* GameScene.sks */; };
+		909B7ACC21F93B50005E88DC /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 909B7ACB21F93B50005E88DC /* Actions.sks */; };
+		909B7ACE21F93B50005E88DC /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909B7ACD21F93B50005E88DC /* GameScene.swift */; };
+		909B7AD021F93B50005E88DC /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909B7ACF21F93B50005E88DC /* GameViewController.swift */; };
+		909B7AD321F93B50005E88DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 909B7AD121F93B50005E88DC /* Main.storyboard */; };
+		909B7AD521F93B52005E88DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 909B7AD421F93B52005E88DC /* Assets.xcassets */; };
+		909B7AD821F93B52005E88DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 909B7AD621F93B52005E88DC /* LaunchScreen.storyboard */; };
+		909B7AE321F93B52005E88DC /* DrawBounceGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909B7AE221F93B52005E88DC /* DrawBounceGameTests.swift */; };
+		909B7AEE21F93B52005E88DC /* DrawBounceGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909B7AED21F93B52005E88DC /* DrawBounceGameUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		909B7ADF21F93B52005E88DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 909B7ABC21F93B50005E88DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 909B7AC321F93B50005E88DC;
+			remoteInfo = DrawBounceGame;
+		};
+		909B7AEA21F93B52005E88DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 909B7ABC21F93B50005E88DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 909B7AC321F93B50005E88DC;
+			remoteInfo = DrawBounceGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		909B7AC421F93B50005E88DC /* DrawBounceGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawBounceGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		909B7AC721F93B50005E88DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		909B7AC921F93B50005E88DC /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		909B7ACB21F93B50005E88DC /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		909B7ACD21F93B50005E88DC /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		909B7ACF21F93B50005E88DC /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		909B7AD221F93B50005E88DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		909B7AD421F93B52005E88DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		909B7AD721F93B52005E88DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		909B7AD921F93B52005E88DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		909B7ADE21F93B52005E88DC /* DrawBounceGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawBounceGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		909B7AE221F93B52005E88DC /* DrawBounceGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawBounceGameTests.swift; sourceTree = "<group>"; };
+		909B7AE421F93B52005E88DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		909B7AE921F93B52005E88DC /* DrawBounceGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawBounceGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		909B7AED21F93B52005E88DC /* DrawBounceGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawBounceGameUITests.swift; sourceTree = "<group>"; };
+		909B7AEF21F93B52005E88DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		909B7AC121F93B50005E88DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		909B7ADB21F93B52005E88DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		909B7AE621F93B52005E88DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		909B7ABB21F93B50005E88DC = {
+			isa = PBXGroup;
+			children = (
+				909B7AC621F93B50005E88DC /* DrawBounceGame */,
+				909B7AE121F93B52005E88DC /* DrawBounceGameTests */,
+				909B7AEC21F93B52005E88DC /* DrawBounceGameUITests */,
+				909B7AC521F93B50005E88DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		909B7AC521F93B50005E88DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				909B7AC421F93B50005E88DC /* DrawBounceGame.app */,
+				909B7ADE21F93B52005E88DC /* DrawBounceGameTests.xctest */,
+				909B7AE921F93B52005E88DC /* DrawBounceGameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		909B7AC621F93B50005E88DC /* DrawBounceGame */ = {
+			isa = PBXGroup;
+			children = (
+				909B7AC721F93B50005E88DC /* AppDelegate.swift */,
+				909B7AC921F93B50005E88DC /* GameScene.sks */,
+				909B7ACB21F93B50005E88DC /* Actions.sks */,
+				909B7ACD21F93B50005E88DC /* GameScene.swift */,
+				909B7ACF21F93B50005E88DC /* GameViewController.swift */,
+				909B7AD121F93B50005E88DC /* Main.storyboard */,
+				909B7AD421F93B52005E88DC /* Assets.xcassets */,
+				909B7AD621F93B52005E88DC /* LaunchScreen.storyboard */,
+				909B7AD921F93B52005E88DC /* Info.plist */,
+			);
+			path = DrawBounceGame;
+			sourceTree = "<group>";
+		};
+		909B7AE121F93B52005E88DC /* DrawBounceGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				909B7AE221F93B52005E88DC /* DrawBounceGameTests.swift */,
+				909B7AE421F93B52005E88DC /* Info.plist */,
+			);
+			path = DrawBounceGameTests;
+			sourceTree = "<group>";
+		};
+		909B7AEC21F93B52005E88DC /* DrawBounceGameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				909B7AED21F93B52005E88DC /* DrawBounceGameUITests.swift */,
+				909B7AEF21F93B52005E88DC /* Info.plist */,
+			);
+			path = DrawBounceGameUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		909B7AC321F93B50005E88DC /* DrawBounceGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 909B7AF221F93B52005E88DC /* Build configuration list for PBXNativeTarget "DrawBounceGame" */;
+			buildPhases = (
+				909B7AC021F93B50005E88DC /* Sources */,
+				909B7AC121F93B50005E88DC /* Frameworks */,
+				909B7AC221F93B50005E88DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DrawBounceGame;
+			productName = DrawBounceGame;
+			productReference = 909B7AC421F93B50005E88DC /* DrawBounceGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		909B7ADD21F93B52005E88DC /* DrawBounceGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 909B7AF521F93B52005E88DC /* Build configuration list for PBXNativeTarget "DrawBounceGameTests" */;
+			buildPhases = (
+				909B7ADA21F93B52005E88DC /* Sources */,
+				909B7ADB21F93B52005E88DC /* Frameworks */,
+				909B7ADC21F93B52005E88DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				909B7AE021F93B52005E88DC /* PBXTargetDependency */,
+			);
+			name = DrawBounceGameTests;
+			productName = DrawBounceGameTests;
+			productReference = 909B7ADE21F93B52005E88DC /* DrawBounceGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		909B7AE821F93B52005E88DC /* DrawBounceGameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 909B7AF821F93B52005E88DC /* Build configuration list for PBXNativeTarget "DrawBounceGameUITests" */;
+			buildPhases = (
+				909B7AE521F93B52005E88DC /* Sources */,
+				909B7AE621F93B52005E88DC /* Frameworks */,
+				909B7AE721F93B52005E88DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				909B7AEB21F93B52005E88DC /* PBXTargetDependency */,
+			);
+			name = DrawBounceGameUITests;
+			productName = DrawBounceGameUITests;
+			productReference = 909B7AE921F93B52005E88DC /* DrawBounceGameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		909B7ABC21F93B50005E88DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Henry Pigg";
+				TargetAttributes = {
+					909B7AC321F93B50005E88DC = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					909B7ADD21F93B52005E88DC = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 909B7AC321F93B50005E88DC;
+					};
+					909B7AE821F93B52005E88DC = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 909B7AC321F93B50005E88DC;
+					};
+				};
+			};
+			buildConfigurationList = 909B7ABF21F93B50005E88DC /* Build configuration list for PBXProject "DrawBounceGame" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 909B7ABB21F93B50005E88DC;
+			productRefGroup = 909B7AC521F93B50005E88DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				909B7AC321F93B50005E88DC /* DrawBounceGame */,
+				909B7ADD21F93B52005E88DC /* DrawBounceGameTests */,
+				909B7AE821F93B52005E88DC /* DrawBounceGameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		909B7AC221F93B50005E88DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				909B7AD321F93B50005E88DC /* Main.storyboard in Resources */,
+				909B7ACA21F93B50005E88DC /* GameScene.sks in Resources */,
+				909B7AD521F93B52005E88DC /* Assets.xcassets in Resources */,
+				909B7AD821F93B52005E88DC /* LaunchScreen.storyboard in Resources */,
+				909B7ACC21F93B50005E88DC /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		909B7ADC21F93B52005E88DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		909B7AE721F93B52005E88DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		909B7AC021F93B50005E88DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				909B7ACE21F93B50005E88DC /* GameScene.swift in Sources */,
+				909B7AD021F93B50005E88DC /* GameViewController.swift in Sources */,
+				909B7AC821F93B50005E88DC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		909B7ADA21F93B52005E88DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				909B7AE321F93B52005E88DC /* DrawBounceGameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		909B7AE521F93B52005E88DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				909B7AEE21F93B52005E88DC /* DrawBounceGameUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		909B7AE021F93B52005E88DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 909B7AC321F93B50005E88DC /* DrawBounceGame */;
+			targetProxy = 909B7ADF21F93B52005E88DC /* PBXContainerItemProxy */;
+		};
+		909B7AEB21F93B52005E88DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 909B7AC321F93B50005E88DC /* DrawBounceGame */;
+			targetProxy = 909B7AEA21F93B52005E88DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		909B7AD121F93B50005E88DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				909B7AD221F93B50005E88DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		909B7AD621F93B52005E88DC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				909B7AD721F93B52005E88DC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		909B7AF021F93B52005E88DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		909B7AF121F93B52005E88DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		909B7AF321F93B52005E88DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F369KVDJ98;
+				INFOPLIST_FILE = DrawBounceGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.henrypigg.DrawBounceGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		909B7AF421F93B52005E88DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F369KVDJ98;
+				INFOPLIST_FILE = DrawBounceGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.henrypigg.DrawBounceGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		909B7AF621F93B52005E88DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F369KVDJ98;
+				INFOPLIST_FILE = DrawBounceGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.henrypigg.DrawBounceGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DrawBounceGame.app/DrawBounceGame";
+			};
+			name = Debug;
+		};
+		909B7AF721F93B52005E88DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F369KVDJ98;
+				INFOPLIST_FILE = DrawBounceGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.henrypigg.DrawBounceGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DrawBounceGame.app/DrawBounceGame";
+			};
+			name = Release;
+		};
+		909B7AF921F93B52005E88DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F369KVDJ98;
+				INFOPLIST_FILE = DrawBounceGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.henrypigg.DrawBounceGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DrawBounceGame;
+			};
+			name = Debug;
+		};
+		909B7AFA21F93B52005E88DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F369KVDJ98;
+				INFOPLIST_FILE = DrawBounceGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.henrypigg.DrawBounceGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DrawBounceGame;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		909B7ABF21F93B50005E88DC /* Build configuration list for PBXProject "DrawBounceGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				909B7AF021F93B52005E88DC /* Debug */,
+				909B7AF121F93B52005E88DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		909B7AF221F93B52005E88DC /* Build configuration list for PBXNativeTarget "DrawBounceGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				909B7AF321F93B52005E88DC /* Debug */,
+				909B7AF421F93B52005E88DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		909B7AF521F93B52005E88DC /* Build configuration list for PBXNativeTarget "DrawBounceGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				909B7AF621F93B52005E88DC /* Debug */,
+				909B7AF721F93B52005E88DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		909B7AF821F93B52005E88DC /* Build configuration list for PBXNativeTarget "DrawBounceGameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				909B7AF921F93B52005E88DC /* Debug */,
+				909B7AFA21F93B52005E88DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 909B7ABC21F93B50005E88DC /* Project object */;
+}

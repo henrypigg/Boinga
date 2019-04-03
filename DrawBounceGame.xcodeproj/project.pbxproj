@@ -84,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				909B7AC621F93B50005E88DC /* DrawBounceGame */,
-				909B7AE121F93B52005E88DC /* DrawBounceGameTests */,
 				909B7AEC21F93B52005E88DC /* DrawBounceGameUITests */,
 				909B7AC521F93B50005E88DC /* Products */,
 			);
@@ -110,6 +109,7 @@
 				909B7ACF21F93B50005E88DC /* GameViewController.swift */,
 				909B7AD121F93B50005E88DC /* Main.storyboard */,
 				909B7AD421F93B52005E88DC /* Assets.xcassets */,
+				909B7AE121F93B52005E88DC /* DrawBounceGameTests */,
 				909B7AD621F93B52005E88DC /* LaunchScreen.storyboard */,
 				909B7AD921F93B52005E88DC /* Info.plist */,
 			);

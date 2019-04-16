@@ -286,9 +286,4 @@ class GameScene: SKScene {
         inkBar.setScale(1.0)
     }
     
-    func distance(_ a: CGPoint, _ b: CGPoint) -> CGFloat {
-        let xDist = a.x - b.x
-        let yDist = a.y - b.y
-        return CGFloat(sqrt(xDist * xDist + yDist * yDist))
-    }
 }

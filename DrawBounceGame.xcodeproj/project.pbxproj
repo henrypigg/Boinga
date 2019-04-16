@@ -17,6 +17,8 @@
 		909B7AD821F93B52005E88DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 909B7AD621F93B52005E88DC /* LaunchScreen.storyboard */; };
 		909B7AE321F93B52005E88DC /* DrawBounceGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909B7AE221F93B52005E88DC /* DrawBounceGameTests.swift */; };
 		909B7AEE21F93B52005E88DC /* DrawBounceGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909B7AED21F93B52005E88DC /* DrawBounceGameUITests.swift */; };
+		90DFEFB322652C9D005F0210 /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DFEFB222652C9D005F0210 /* functions.swift */; };
+		90DFEFB522652CAA005F0210 /* global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DFEFB422652CAA005F0210 /* global.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		909B7AE921F93B52005E88DC /* DrawBounceGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawBounceGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		909B7AED21F93B52005E88DC /* DrawBounceGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawBounceGameUITests.swift; sourceTree = "<group>"; };
 		909B7AEF21F93B52005E88DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90DFEFB222652C9D005F0210 /* functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
+		90DFEFB422652CAA005F0210 /* global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = global.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				909B7AC921F93B50005E88DC /* GameScene.sks */,
 				909B7ACB21F93B50005E88DC /* Actions.sks */,
 				909B7ACD21F93B50005E88DC /* GameScene.swift */,
+				90DFEFB222652C9D005F0210 /* functions.swift */,
+				90DFEFB422652CAA005F0210 /* global.swift */,
 				909B7ACF21F93B50005E88DC /* GameViewController.swift */,
 				909B7AD121F93B50005E88DC /* Main.storyboard */,
 				909B7AD421F93B52005E88DC /* Assets.xcassets */,
@@ -270,6 +276,8 @@
 				909B7ACE21F93B50005E88DC /* GameScene.swift in Sources */,
 				909B7AD021F93B50005E88DC /* GameViewController.swift in Sources */,
 				909B7AC821F93B50005E88DC /* AppDelegate.swift in Sources */,
+				90DFEFB322652C9D005F0210 /* functions.swift in Sources */,
+				90DFEFB522652CAA005F0210 /* global.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

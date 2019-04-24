@@ -11,11 +11,17 @@ import SpriteKit
 
 class GameViewController: UIViewController {
     
+    
+    var scene = SKScene()
+    
+    var PauseAnimation = [SKTexture]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if let view = view as? SKView {
             // Create the scene programmatically
-            let scene = GameScene(size: view.bounds.size)
+            scene = GameScene(size: view.bounds.size)
             scene.scaleMode = .resizeFill
             view.ignoresSiblingOrder = true
             //view.showsFPS = true
@@ -25,6 +31,11 @@ class GameViewController: UIViewController {
             view.presentScene(scene)
         }
     }
+    
+        
+        
+        
+    
     
     override var prefersStatusBarHidden: Bool {
         return true

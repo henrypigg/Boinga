@@ -11,21 +11,35 @@ import GameplayKit
 
 class GameScene: SKScene {
     
+    
     private var ball = SKSpriteNode()
-    private var ballWinkingFrames: [SKTexture] = []
+    
     private var backgroundCounter = 1
     private var parallaxBackgroundCounter = 1
     private var inkCounter:CGFloat = 0.1
+    
+    private var pauseMenu = SKSpriteNode()
+    private var pauseButton = SKSpriteNode()
+    
     private var background1 = SKSpriteNode()
     private var background2 = SKSpriteNode()
     private var parallaxBG1 = SKSpriteNode()
     private var parallaxBG2 = SKSpriteNode()
-    private var walkFrames: [SKTexture] = []
-    private var inkBar = SKShapeNode()
-    private var isTouching = false
     
-    public var mainBackground = "mainCaveBG"
-    public var parallaxBackground = "parallaxCaveBG"
+    private var ballWinkingFrames: [SKTexture] = []
+    private var walkFrames: [SKTexture] = []
+    
+    private var pauseAnimation = [SKTexture]()
+    let pauseAnimatedAtlas = SKTextureAtlas(named: "PauseMenu")
+    var ballPositionWhenPaused = CGFloat()
+
+    
+    private var inkBar = SKShapeNode()
+    
+    private var pauseMenuIsOpen = false
+    
+    public var mainBackground = "MountainBG"
+    public var parallaxBackground = "parallaxMountainBG"
     
     var pathArray = [CGPoint]()
     
@@ -38,15 +52,26 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         
-        background1 = SKSpriteNode(imageNamed: "\(mainBackground)")
-        background2 = SKSpriteNode(imageNamed: "\(mainBackground)")
+        let numOfImages = pauseAnimatedAtlas.textureNames.count
+        for i in 1...numOfImages {
+            let pauseTextureName = "Frame\(i-1)"
+            pauseAnimation.append(pauseAnimatedAtlas.textureNamed(pauseTextureName))
+        }
+        pauseMenu = SKSpriteNode(texture: pauseAnimation[0])
+        
+        pauseButton.texture = SKTexture(imageNamed: "PauseButton")
+        pauseButton.size = CGSize(width: 35, height: 35)
+        pauseButton.position = CGPoint(x: frame.width - 45, y: frame.height - 75)
+        
+        background1 = SKSpriteNode(imageNamed: "main\(mainBackground)")
+        background2 = SKSpriteNode(imageNamed: "main\(mainBackground)")
         parallaxBG1 = SKSpriteNode(imageNamed: "\(parallaxBackground)")
         parallaxBG2 = SKSpriteNode(imageNamed: "\(parallaxBackground)")
         
         self.camera = cam
         cam.position.y = frame.midY
         
-        scoreCount = SKLabelNode(fontNamed: "ArialRoundedMTBold ")
+        scoreCount = SKLabelNode(fontNamed: "Ayuthaya")
         scoreCount.zPosition = 2
         scoreCount.text = "0"
         scoreCount.fontSize = 72
@@ -91,6 +116,8 @@ class GameScene: SKScene {
         
         addChild(scoreCount)
         
+        addChild(pauseButton)
+        
         buildCharacter()
         animateBall()
         
@@ -99,17 +126,19 @@ class GameScene: SKScene {
     
     func touchDown(atPoint pos : CGPoint) {
         
+        
+        
         pathArray.removeAll()
         if physicsWorld.gravity != CGVector(dx: 0, dy: -9.8) {
             physicsWorld.gravity = CGVector(dx: 0, dy: -9.8)
         }
         
-        isTouching = true
         
     }
     
     
     func touchMoved(toPoint pos : CGPoint) {
+        
         if(inkCounter < 6000) {
             pathArray.append(pos)
             if(pathArray.count >= 2) {
@@ -121,8 +150,14 @@ class GameScene: SKScene {
     }
     
     func touchUp(atPoint pos : CGPoint) {
-        
-        isTouching = false
+        if pauseButton.contains(pos) {
+            if pauseMenuIsOpen == false {
+                openPauseMenu()
+            } else {
+                closePauseMenu()
+                
+            }
+        }
         
     }
     
@@ -202,20 +237,29 @@ class GameScene: SKScene {
         addChild(ball)
     }
     
+    
     func animateBall() {
-        ball.run(SKAction.repeatForever(SKAction.animate(with: ballWinkingFrames, timePerFrame: 0.1, resize: false, restore: true)), withKey: "winkingBall")
+        ball.run(SKAction.animate(with: ballWinkingFrames, timePerFrame: 0.1, resize: false, restore: true), withKey: "winkingBall")
     }
+    
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
-        
-        if cam.position.x < ball.position.x {
+        //print(cam.position.x)
+        if cam.position.x <= ball.position.x {
             let offset = ball.position.x - cam.position.x
             parallaxBG1.position.x += offset * 0.35
             parallaxBG2.position.x += offset * 0.35
-            cam.position.x = ball.position.x
+            
+            if pauseMenuIsOpen == false {
+                cam.position.x = ball.position.x
+            }
+            
+            
+            //move GUI
             scoreCount.position.x = ball.position.x
             scoreCount.text = ("\(Int((ball.position.x-(frame.width/2)) / 100))")
+            pauseButton.position.x = cam.position.x + frame.width / 2 - 45
         }
         //move ink bar
         inkBar.position.x = cam.position.x - frame.width / 2 + 20
@@ -255,35 +299,93 @@ class GameScene: SKScene {
             }
         }
         
-        print(inkCounter)
+        //print(inkCounter)
         
         //delete ball when exits screen
         if ball.position.y < 0 {
             ball.removeFromParent()
-            reset()
+            reset(toPoint: 0)
         }
         
-        
-        //draws line
-        if isTouching == true {
-            
-        }
         
     }
     
-    func reset() {
-        background1.position = CGPoint(x: 0, y: 0)
-        background2.position = CGPoint(x: background1.size.width, y: 0)
-        parallaxBG1.position = CGPoint(x: -parallaxBG2.size.width/2, y: 0)
-        parallaxBG2.position = CGPoint(x: parallaxBG2.size.width/2, y: 0)
+    func reset(toPoint: CGFloat) {
+        background1.position = CGPoint(x: toPoint - background1.size.width/2, y: 0)
+        background2.position = CGPoint(x: toPoint + background1.size.width/2, y: 0)
+        parallaxBG1.position = CGPoint(x: toPoint - parallaxBG2.size.width/2, y: 0)
+        parallaxBG2.position = CGPoint(x: toPoint + parallaxBG2.size.width/2, y: 0)
         buildCharacter()
+        ball.position.x = toPoint
         cam.position.x = ball.position.x
         scoreCount.position.x = ball.position.x
-        scoreCount.text = "0"
         physicsWorld.gravity = CGVector(dx: 0, dy: 0)
-        inkCounter = 0.1
+        
+        if toPoint == 0 {
+            scoreCount.text = "0"
+            inkCounter = 0.1
+            inkBar.isHidden = false
+            inkBar.setScale(1.0)
+        }
+        
+        
+        
+    }
+    
+    func pauseMenuInit() {
+        
+    }
+    
+    func openPauseMenu() {
+        
+        ballPositionWhenPaused = ball.position.x
+        ball.removeFromParent()
+        pauseMenuIsOpen = true
+        //pauseButton.isHidden = true
+        
+        scoreCount.isHidden = true
+        inkBar.isHidden = true
+        
+        background1.texture = SKTexture(imageNamed: "\(mainBackground)Blur")
+        background2.texture = SKTexture(imageNamed: "\(mainBackground)Blur")
+        
+        pauseMenu.anchorPoint = CGPoint(x: 0, y: 0)
+        pauseMenu.position = CGPoint(x: cam.position.x - frame.width/2, y: 0)
+        //print("test: \(cam.position.x)")
+        pauseMenu.size = frame.size
+        pauseMenu.zPosition = 4
+        pauseMenu.name = "pause"
+        addChild(pauseMenu)
+        pauseAnimation.reverse()
+        
+        animatePauseMenu()
+        
+        pauseMenu.texture = pauseAnimation[36]
+    }
+    
+    func closePauseMenu() {
+        
+        reset(toPoint: ballPositionWhenPaused)
+        pauseMenuIsOpen = false
+        background1.texture = SKTexture(imageNamed: "main\(mainBackground)")
+        background2.texture = SKTexture(imageNamed: "main\(mainBackground)")
+        
+        //pauseButton.isHidden = false
+        ball.isHidden = false
+        scoreCount.isHidden = false
         inkBar.isHidden = false
-        inkBar.setScale(1.0)
+        
+        pauseAnimation.reverse()
+        
+        pauseMenu.run(SKAction.animate(with: pauseAnimation, timePerFrame: 0.02, resize: false, restore: true)) {
+            self.pauseMenu.removeFromParent()
+        }
+        
+        
+    }
+    
+    func animatePauseMenu() {
+        pauseMenu.run(SKAction.animate(with: pauseAnimation, timePerFrame: 0.02, resize: false, restore: true), withKey: "pauseMenu")
     }
     
 }

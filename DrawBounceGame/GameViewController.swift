@@ -19,9 +19,11 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         if let view = view as? SKView {
             // Create the scene programmatically
-            scene = GameScene(size: view.bounds.size)
+            
+            scene = GameIntroScene(size: CGSize(width: 2048, height: 1536))
             scene.scaleMode = .resizeFill
             view.ignoresSiblingOrder = true
             //view.showsFPS = true

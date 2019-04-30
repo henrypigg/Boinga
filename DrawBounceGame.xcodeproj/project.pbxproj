@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		402051D72278DB6E00F40D5D /* GameIntroScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402051D62278DB6E00F40D5D /* GameIntroScene.swift */; };
 		909B7AC821F93B50005E88DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909B7AC721F93B50005E88DC /* AppDelegate.swift */; };
 		909B7ACA21F93B50005E88DC /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 909B7AC921F93B50005E88DC /* GameScene.sks */; };
 		909B7ACC21F93B50005E88DC /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 909B7ACB21F93B50005E88DC /* Actions.sks */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		402051D62278DB6E00F40D5D /* GameIntroScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameIntroScene.swift; sourceTree = "<group>"; };
 		909B7AC421F93B50005E88DC /* DrawBounceGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawBounceGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		909B7AC721F93B50005E88DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		909B7AC921F93B50005E88DC /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -88,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				909B7AC621F93B50005E88DC /* DrawBounceGame */,
-				909B7AEC21F93B52005E88DC /* DrawBounceGameUITests */,
 				909B7AC521F93B50005E88DC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,7 +113,9 @@
 				909B7ACD21F93B50005E88DC /* GameScene.swift */,
 				90DFEFB222652C9D005F0210 /* functions.swift */,
 				90DFEFB422652CAA005F0210 /* global.swift */,
+				402051D62278DB6E00F40D5D /* GameIntroScene.swift */,
 				909B7ACF21F93B50005E88DC /* GameViewController.swift */,
+				909B7AEC21F93B52005E88DC /* DrawBounceGameUITests */,
 				909B7AD121F93B50005E88DC /* Main.storyboard */,
 				909B7AD421F93B52005E88DC /* Assets.xcassets */,
 				909B7AE121F93B52005E88DC /* DrawBounceGameTests */,
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				909B7ACE21F93B50005E88DC /* GameScene.swift in Sources */,
+				402051D72278DB6E00F40D5D /* GameIntroScene.swift in Sources */,
 				909B7AD021F93B50005E88DC /* GameViewController.swift in Sources */,
 				909B7AC821F93B50005E88DC /* AppDelegate.swift in Sources */,
 				90DFEFB322652C9D005F0210 /* functions.swift in Sources */,

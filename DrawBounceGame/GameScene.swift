@@ -41,6 +41,12 @@ class GameScene: SKScene {
     public var mainBackground = "MountainBG"
     public var parallaxBackground = "parallaxMountainBG"
     
+    private var healthCoin = SKSpriteNode(imageNamed: "HealthPackCoin")
+    //var YcoinValue = Int.random(in: 100 ..< 300)
+    //var XcoinValue = Int.random(in: 500 ..< 1000)
+    var XcoinValue = 1000
+    var YcoinValue = 500
+    
     var pathArray = [CGPoint]()
     
     var scoreCount = SKLabelNode()
@@ -51,7 +57,7 @@ class GameScene: SKScene {
     
     
     override func didMove(to view: SKView) {
-        
+
         let numOfImages = pauseAnimatedAtlas.textureNames.count
         for i in 1...numOfImages {
             let pauseTextureName = "Frame\(i-1)"
@@ -107,6 +113,13 @@ class GameScene: SKScene {
         parallaxBG1.position = CGPoint(x: -parallaxBG2.size.width/2, y: 0)
         parallaxBG2.position = CGPoint(x: parallaxBG2.size.width/2, y: 0)
         
+        
+        
+       /** if (XcoinValue < Int(ball.position.x)) {
+            print("in")
+            XcoinValue = Int(pauseButton.position.x) + Int.random(in: 0 ..< 1000)
+            YcoinValue =  Int.random(in: 0 ..< 500)
+        }**/
         addChild(background1)
         addChild(background2)
         addChild(parallaxBG1)
@@ -118,16 +131,16 @@ class GameScene: SKScene {
         
         addChild(pauseButton)
         
+        addChild(healthCoin)
+        
         buildCharacter()
         animateBall()
         
     }
     
-    
     func touchDown(atPoint pos : CGPoint) {
         
-        
-        
+    
         pathArray.removeAll()
         if physicsWorld.gravity != CGVector(dx: 0, dy: -9.8) {
             physicsWorld.gravity = CGVector(dx: 0, dy: -9.8)
@@ -305,9 +318,17 @@ class GameScene: SKScene {
         if ball.position.y < 0 {
             ball.removeFromParent()
             reset(toPoint: 0)
+            XcoinValue = 500
+            YcoinValue = 1000
         }
         
-        
+        if (XcoinValue < Int(ball.position.x)-200) {
+            XcoinValue = Int(pauseButton.position.x) + Int.random(in: 0 ..< 1000)
+            YcoinValue =  Int.random(in: 0 ..< 1000)
+        }
+        print( XcoinValue )
+        print( YcoinValue )
+        healthCoin.position = CGPoint(x: XcoinValue, y: YcoinValue)
     }
     
     func reset(toPoint: CGFloat) {

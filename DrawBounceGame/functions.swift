@@ -14,3 +14,42 @@ func distance(_ a: CGPoint, _ b: CGPoint) -> CGFloat {
     let yDist = a.y - b.y
     return CGFloat(sqrt(xDist * xDist + yDist * yDist))
 }
+
+extension Notification.Name
+{
+    static let addAd = Notification.Name("addAd")
+    static let noAds = Notification.Name("noAds")
+    static let restorePurchases = Notification.Name("restorePurchases")
+}
+
+extension NSDate
+{
+    func hour() -> Int {
+        let hour = Calendar.current.component(.hour, from: Date())
+        
+        return hour
+    }
+}
+
+func playSound(sound: String, scene: SKScene) {
+    
+    if UserDefaults.standard.bool(forKey: "isSoundEnabled") == true {
+        scene.run(SKAction.playSoundFileNamed(sound, waitForCompletion: false))
+        
+    }
+}
+
+func addMusic(music: SKAudioNode, scene: SKScene) {
+    if UserDefaults.standard.bool(forKey: "isMusicEnabled") == true {
+        scene.addChild(music)
+    }
+    
+}
+
+func removeMusic(music: SKAudioNode, scene: SKScene) {
+    if UserDefaults.standard.bool(forKey: "isMusicEnabled") == true {
+        music.removeFromParent()
+    }
+}
+
+
